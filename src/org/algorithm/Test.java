@@ -1,10 +1,13 @@
 package org.algorithm;
 
 import org.algorithm.linkedlist.MyLinkedList;
+import org.algorithm.monotonicStack.DailyTemperatures;
+
+import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        myLinkedList();
+        dailyTemp();
     }
 
     public static void myLinkedList() {
@@ -20,5 +23,12 @@ public class Test {
         myLinkedList.get(5);
         myLinkedList.deleteAtIndex(6);
         myLinkedList.deleteAtIndex(4);
+    }
+
+    public static void dailyTemp() {
+        DailyTemperatures dailyTemperatures = new DailyTemperatures();
+        int[] temps = new int[]{73,74,75,71,69,72,76,73};
+        int[] res = dailyTemperatures.dailyTemperatures(temps);
+        System.out.println(Arrays.toString(res));
     }
 }
